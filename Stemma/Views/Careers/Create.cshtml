@@ -1,0 +1,204 @@
+﻿@model Stemma.Models.Career
+
+@{
+    ViewBag.Title = "Career Profile Questions";
+}
+<link href="~/Content/Family-RelationshipStyle.css" rel="stylesheet" />
+
+<div class="PageHeader">
+    <h2>Career & Education</h2>
+</div>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Answer these questions to help build your Stemma.</h4>
+        <h4>Your answers will be used to direct how you curate your timeline.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AttendedCollege, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @*you will replace the EditorFor line with two RadioButtonFor lines*@
+                    @Html.RadioButtonFor(model => model.AttendedCollege, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.AttendedCollege, "False", false) No
+                    @Html.ValidationMessageFor(model => model.AttendedCollege, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Graduations, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.Graduations, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Graduations, "False", false) No
+                    @Html.ValidationMessageFor(model => model.Graduations, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HaveJob, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.HaveJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.HaveJob, "False", false) No
+                    @Html.ValidationMessageFor(model => model.HaveJob, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HadJob, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.HadJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.HadJob, "False", false) No
+                    @Html.ValidationMessageFor(model => model.HadJob, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Accomplishments, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.Accomplishments, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Accomplishments, "False", false) No
+                    @Html.ValidationMessageFor(model => model.Accomplishments, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstDayOfSchool, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.FirstDayOfSchool, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.FirstDayOfSchool, "False", false) No
+                    @Html.ValidationMessageFor(model => model.FirstDayOfSchool, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArmedForces, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.ArmedForces, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.ArmedForces, "False", false) No
+                    @Html.ValidationMessageFor(model => model.ArmedForces, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Volunteer, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.Volunteer, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Volunteer, "False", false) No
+                    @Html.ValidationMessageFor(model => model.Volunteer, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Legacies, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.Legacies, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Legacies, "False", false) No
+                    @Html.ValidationMessageFor(model => model.Legacies, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TechSchool, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.TechSchool, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.TechSchool, "False", false) No
+                    @Html.ValidationMessageFor(model => model.TechSchool, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LicensesCertifications, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.LicensesCertifications, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.LicensesCertifications, "False", false) No
+                    @Html.ValidationMessageFor(model => model.LicensesCertifications, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstJob, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.FirstJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.FirstJob, "False", false) No
+                    @Html.ValidationMessageFor(model => model.FirstJob, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WorstJob, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
+                <div class="checkbox">
+                    @Html.RadioButtonFor(model => model.WorstJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.WorstJob, "False", false) No
+                    @Html.ValidationMessageFor(model => model.WorstJob, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-6 col-md-6">
+                <input type="submit" value="Save Your Answers" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="Profile">
+    @Html.ActionLink("Return to Your Profile", "Create", "UserProfile")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-top" id="navaay">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+

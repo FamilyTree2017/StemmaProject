@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Stemma.Models.EventTable>
+
+@{
+    ViewBag.Title = "Your TimeLine";
+}
+<script src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script src="~/Scripts/fileUploader.js"></script>
+<link href="~/Content/TimeLine.css" rel="stylesheet" />
+<h2>Your Stemma Timeline</h2>
+
+<section class="timeline">
+    <ul>
+        @foreach (var item in Model)
+        {
+
+            <li>
+                <div>
+                    <h1><b>@Html.DisplayFor(modelItem => item.EventTitle)</b></h1>
+
+
+                    <img class="uploadedImage" src="@item.UploadMedia" alt="DanaPic" id="itemImg" />                  
+
+
+                    <time>@Html.DisplayFor(modelItem => item.EventYear)</time>
+                    <p>@Html.DisplayFor(modelItem => item.EventCaption)</p>
+
+
+
+
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.EventID }) |*@
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.EventID })*@
+                </div>
+            </li>
+        }
+
+
+
+    </ul>
+</section>
+
+
+@*@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeopleInvolved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventCaption)
+        </td>*@
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventID })
+        </td>
+    </tr>
+}*@
+
+@*</table>*@
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Your Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Your Profile", "Create", "UserProfiles")</li>
+                <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+
+
+

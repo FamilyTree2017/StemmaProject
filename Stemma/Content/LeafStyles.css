@@ -1,0 +1,134 @@
+﻿/****** THIS IS MY LEAFSTYLES IN FINAL PROJECT MOCKUP ******/
+
+/**********************HOME PAGE ***********************/
+/*LANDING PAGE*/
+body {
+    /*background-image: url('Images/pexels-photo-365638.jpeg');*/
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(200,200,175,0.2) 0%), url('Images/pexels-photo-365638.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-bottom: 0px;*/
+    height: 100%;
+    margin: 0;
+    /* The image used */
+    background-image: url('Images/Devions-60-photo-365638.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*.leaf-landing-page {
+    background-image: url('Devions-60-photo-365638.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+}*/
+
+.jumbotron {
+    font-family: Roboto;
+    color:  rgb(128,15,60);
+    text-align: center;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(118, 15, 30);
+    box-shadow: 5px 5px 70px rgb(128,15,60);
+    background: linear-gradient( rgba(195, 200, 5,.8), rgba(255, 255, 255,.8), rgba(255, 215, 105,.6));
+    margin-top: 75px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+    .jumbotron h1 {
+        margin-top: -40px;
+        font-family: Allura;
+        font-size: 150px;
+        color: green;
+        text-shadow: 1px 1px 1px rgba(255,255,111,.4);
+        margin-bottom: -60px;
+    }
+
+    .jumbotron h2 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -10px;
+    margin-right: -10px;
+    line-height: 1.5;
+    color: rgb(80,73,62);
+    font-size: 24px;
+    font-weight: 400;
+    }
+/*BOXES ON LANDING PAGE*/
+/*#landing-page-text-boxes {
+    background: linear-gradient( rgba(195, 255, 15,.3), 
+                                 rgba(255, 255, 255,.5), 
+                                 rgba(255, 255, 105,.2));
+    margin: 0;
+    padding: 0 1vw 2vh 1vw;
+    color: rgb(0, 30, 0);
+    font-size: 2rem;
+    font-weight: 500;
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}*/
+.box {
+    color:  rgba(128,15,60, 0.8);
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(118, 15, 30);
+    background: linear-gradient( rgba(195, 200, 5,.8), rgba(255, 255, 255,.7), rgba(255, 215, 105,.6));
+    margin: 5px;
+    padding: 5px;
+    height: 325px;
+    width: 402px;
+    border-radius:4%;
+    padding-bottom: 0px;
+
+}
+.box p {
+    color: rgb(80,73,62);
+    text-align: justify;
+    font-size: 20px;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.box h2 {
+    color: rgb(88,15,60);
+    text-align: center;
+    font-size: 32px;
+}
+.cta-box {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 10px;
+}
+/*#landing-page-text-boxes h3{
+    color: rgb(0,10,0);
+}
+#landing-page-text-boxes .textbox{
+    width: 20vw;
+    height: 37vh;
+}
+#landing-page-text-boxes .textbox .btn{
+}*/
+
+
+/******************* END OF LANDING PAGE ******************/
+
+/*h5 {
+    color: rgb(224, 207, 170);
+    color: rgb(166,150,125);
+    color: rgb(136,122,90);
+    color: rgb(80,73,62);
+    color: rgba(240, 255, 2,1);
+    color: rgb(177, 198, 77);
+    color: rgb(80,110,40);
+    color: rgb(88,15,60);
+    color: rgb(77,83,125);
+    color: rgb(20,18,60);*/
+}
+
+
+
+

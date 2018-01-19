@@ -1,0 +1,363 @@
+﻿@model Stemma.Models.HobbyTable
+<link href="~/Content/detailsCSS.css" rel="stylesheet" />
+<link href="~/Content/LeafStyles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Suggestions for Hobby Stems";
+}
+
+<div class="detailsHeading">
+    <h1>Hobbies & Interests</h1>
+    <h3>Based on your answers, here are some ideas to add to your Stemma:</h3>
+</div>
+<div>
+    <div class="rowDetails">
+        @if (Model.PlaySports == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You play sports. Make a post for...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            teams you played on in high school or college.
+                        </li>
+                        <li class="fa fa-envira">
+                            important games you played or competitions you entered.
+                        </li>
+                        <li class="fa fa-envira">
+                            something that you have recently accomplished.
+                        </li>
+                        <li class="fa fa-envira">
+                            memorable days for teams you love.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.InAShow == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You've been in a show. Make a post about...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            shows you've been in.
+                        </li>
+                        <li class="fa fa-envira">
+                            shows you've attended.
+                        </li>
+                        <li class="fa fa-envira">
+                            something that did not go as planned.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Travel == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You like to travel. Post about...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your travel stories and photos.
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite trip.
+                        </li>
+                        <li class="fa fa-envira">
+                            the worst experience you had traveling.
+                        </li>
+                        <li class="fa fa-envira">
+                            what you learned on your latest trip.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.OutdoorPerson == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You love the great outdoors. Do you...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have memories of outdoor adventures.
+                        </li>
+                        <li class="fa fa-envira">
+                            have a favorite hike or activity.
+                        </li>
+                        <li class="fa fa-envira">
+                            take trips to the beach.
+                        </li>
+                        <li class="fa fa-envira">
+                            have a bucket list destination.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.TravelAbroad == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You have traveled abroad. Post about...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your cultural discoveries while traveling abroad.
+                        </li>
+                        <li class="fa fa-envira">
+                            favorite foods from a foreign country.
+                        </li>
+                        <li class="fa fa-envira">
+                            advice you have for new travelers.
+                        </li>
+                        <li class="fa fa-envira">
+                            the best and worst experience you've had.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Passions == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You have additional passions. Did you...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            do something to discover or uncover it.
+                        </li>
+                        <li class="fa fa-envira">
+                            attend any events.
+                        </li>
+                        <li class="fa fa-envira">
+                            take trips to fair or conventions.
+                        </li>
+                        <li class="fa fa-envira">
+                            take any lessons to courses to improve.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Talents == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+
+                    <h4>You have talents. Post about...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            how you learned your talent(s).
+                        </li>
+                        <li class="fa fa-envira">
+                            a time you got to show off your talent(s).
+                        </li>
+                        <li class="fa fa-envira">
+                            your goals and ambitions.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Trophies == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You've won a trophy or award. Do you...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a story about how you earned this award.
+                        </li>
+                        <li class="fa fa-envira">
+                            have any advice for someone trying to attain this award.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.Exercise == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You like to work out. Do you...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a  favorite place to exercise.
+                        </li>
+                        <li class="fa fa-envira">
+                            have a time you achieved a physical fitness milestone.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.FamilyVacation == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You take family vacations.  Do you have...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            memories and photos of a family vacation.
+                        </li>
+                        <li class="fa fa-envira">
+                            a favorite vacation you took.
+                        </li>
+                        <li class="fa fa-envira">
+                            a funny story to share.
+                        </li>
+                        <li class="fa fa-envira">
+                            a memory of a bad trip.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.ChildhoodVacation == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>You took vacations when you were younger. Do you...</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have memories and photos of a vacation from your childhood.
+                        </li>
+                        <li class="fa fa-envira">
+                            a favorite vacation you took.
+                        </li>
+                        <li class="fa fa-envira">
+                            a funny story to share.
+                        </li>
+                        <li class="fa fa-envira">
+                            a memory of a bad trip.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.AnythingElse == true)
+            {
+            <div class="col-md-4 resultBox">
+                <div class="thumbnail">
+                    <h4>We missed something that's important to you.</h4>
+                    <ul>
+                        <li class="fa fa-envira">
+                            Make an entry for other activities, hobbies, interests or enthusiasms you'd like to remember.
+                        </li>
+                    </ul>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-md-4 resultBox">
+            <div class="thumbnail">
+                <h4>
+                    @Html.ActionLink("Update Your Hobbies & Interests", "Edit", new { id = Model.HobbyID })
+                </h4>
+                <h4>
+                    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+                </h4>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @*<li class="fa fa-envira">@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="fa fa-envira">@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li class="fa fa-envira">@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li class="fa fa-envira">@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                <li class="fa fa-envira">@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+

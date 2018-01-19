@@ -1,0 +1,90 @@
+﻿@model Stemma.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title></title>
+
+    <!-- Stylesheets -->
+    <link href="~/Content/RegisterStyle.css" rel="stylesheet" />
+   
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body> 
+    <div id="main-wrapper" class="hidden">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 left-side">
+                    <header>
+                        <span>Register</span>
+                        <h3 style="color:grey">Stemma</h3>
+                        <h2 style="color:grey">Capturing the best moments in life.</h2>
+                    </header>
+                </div>
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+                { 
+                    @Html.AntiForgeryToken()
+                    <div class="col-md-6 right-side">
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="name">
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="name">
+                                <span class="input__label-content input__label-content--hoshi">Name</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "input__field input__field--hoshi" })
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="Email">
+                                <span class="input__label-content input__label-content--hoshi" >E-mail</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            @Html.PasswordFor(m => m.Password, new { @class = "input__field input__field--hoshi" })
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="Password">
+                                <span class="input__label-content input__label-content--hoshi">Password</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "input__field input__field--hoshi" })
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="ConfirmPassword">
+                                <span class="input__label-content input__label-content--hoshi">Confirm Password</span>
+                            </label>
+                        </span>
+                        <div class="cta">
+                            <input type="submit" class="btn btn-default" value="Register" />
+                            <a class="btn btn-success" href="/"> 
+                                <i class="fa fa-envira" style="font-size:15px"></i> Home
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div> <!-- end #main-wrapper -->
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div.hidden').fadeIn(6000).removeClass('hidden');
+
+        });
+ 
+    </script>
+   
+</body>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+

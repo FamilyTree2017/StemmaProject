@@ -1,0 +1,218 @@
+﻿@model IEnumerable<Stemma.Models.HobbyTable>
+
+@{
+    ViewBag.Title = "Hobby Profile";
+}
+
+@*logic is complete. text needs to be edited.*@
+
+<h2>Your Hobbies and Interests</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<table class="table">*@
+
+@foreach (var item in Model) {
+    @*<tr>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PlaySports)
+        </td>*@
+    if (item.PlaySports == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.InAShow)
+        </td>*@
+    if (item.InAShow == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Travel)
+        </td>*@
+    if (item.Travel == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OutdoorPerson)
+        </td>*@
+    if (item.OutdoorPerson == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TravelAbroad)
+        </td>*@
+    if (item.TravelAbroad == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Passions)
+        </td>*@
+    if (item.Passions == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Talents)
+        </td>*@
+    if (item.Talents == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Trophies)
+        </td>*@
+    if (item.Trophies == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Exercise)
+        </td>*@
+    if (item.Exercise == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FamilyVacation)
+        </td>*@
+    if (item.FamilyVacation == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ChildhoodVacation)
+        </td>*@
+    if (item.ChildhoodVacation == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>*@
+    if (item.AnythingElse == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HobbyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HobbyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HobbyID })
+        </p>
+    @*</tr>*@
+}
+
+@*</table>*@

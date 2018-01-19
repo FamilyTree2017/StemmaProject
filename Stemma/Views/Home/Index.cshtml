@@ -1,0 +1,105 @@
+﻿
+
+
+        <!-- LANDING JUMBOTRON -->
+            <div class="jumbotron">
+                <h1>Stemma</h1>
+                <h2>
+                    Capturing the moments, people, places, and everything in between that makes your life special is made easy with Stemma.
+                </h2>
+                <div class="cta">
+                    <a class="btn btn-success" href="/Account/Register"> <i class="fa fa-envira" style="font-size: 15px"></i>Get started</a>
+                </div>
+            </div>
+
+<body>
+    <!-- LANDING INTROS -->
+        <div class="box col-md-3">
+            <h2>The little things...</h2>
+            <p>
+                How do you capture life's little everyday moments?
+                Do you need reminded to take a picture with a friend or family member?
+                Do you want to record a story or a song?
+                Never forget a moment with the help of Stemma.
+            </p>
+            <div class="cta-box">
+                <a class="btn btn-success" href="/Account/Register"> <i class="fa fa-envira" style="font-size: 15px"></i>Get started</a>
+            </div>
+        </div>
+        <div class="box col-md-3">
+            <h2>The big things...</h2>
+            <p>Record all of those major moments - weddings, graduations, births, a new job, and buying a house. What changed in your life, what changed you, and how do you remember it? Keep track of your life with Stemma.</p>
+            <div class="cta-box">
+                <a class="btn btn-success" href="/Account/Register"> <i class="fa fa-envira" style="font-size: 15px"></i>Get started</a>
+            </div>
+        </div>
+        <div class="box col-md-3">
+            <h2>What came before...</h2>
+            <p>Easily archive your family history. Upload pictures, create events, and record your stories with the help of our guided questions. Have everything organized, curated, and easily accessed in one place with of Stemma.</p>
+            <div class="cta-box">
+                <a class="btn btn-success" href="/Account/Register"> <i class="fa fa-envira" style="font-size: 15px"></i>Get started</a>
+            </div>
+        </div>
+        <div class="box col-md-3">
+            <h2>...and what is yet to come.</h2>
+            <p>Leave life lessons, stories, and memories via pictures, audio, and video, for future generations. Preserve your history, stories, and perspective for your loved ones with the help of Stemma.</p>
+            <div class="cta-box">
+                <a class="btn btn-success" href="/Account/Register"> <i class="fa fa-envira" style="font-size: 15px"></i>Get started</a>
+            </div>
+        </div>
+    
+</body>
+@*<footer>
+    <p>&copy; @DateTime.Now.Year - Stemma</p>
+</footer>*@
+    <!-- /container -->
+    <!-- Scripts
+    ================================================== -->
+    <!--Font Awesome-->
+    <!-- Scripts -->
+    <script src="https://use.fontawesome.com/116c5da17a.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="JavaScript.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Stemma</title>
+    <!--Google Font API link-->
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Allura:300,400,500,600,700%Roboto:%7%Pacifico:100,300,400,500">
+<link href="~/Content/LeafStyles.css" rel="stylesheet" />
+
+    @*Put navbar onto media page and make the timeline go to the index of the event table*@
+    <div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div id="navaay" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    @*<li>@Html.ActionLink("Stemma", "Index", "Home")</li>*@
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    @*<li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                        <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>*@
+                    <li>@Html.Partial("_LoginPartial")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
